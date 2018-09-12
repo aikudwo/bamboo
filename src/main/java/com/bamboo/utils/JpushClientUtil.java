@@ -1,4 +1,4 @@
-package com.bamboo.grow.utils;
+package com.bamboo.utils;
 
 import cn.jiguang.common.resp.APIConnectionException;
 import cn.jiguang.common.resp.APIRequestException;
@@ -338,10 +338,4 @@ public class JpushClientUtil {
                         .build())
                 .build();
     }
-
-//    public static void main(String[] args){
-//        if(JpushClientUtil.sendToAllIos("testIos","testIos","this is a ios Dev test","")==1){
-//            System.out.println("success");
-//        }
-//    }
 }

@@ -18,6 +18,22 @@ spring:
       username: dev_data
       password: 6b4BnnmiczHEBZGs
 
+# mybatis plus 配置
+mybatis-plus:
+  mapper-locations: classpath*:mybatis/*.xml
+  type-aliases-package: com.bamboo.model
+  check-config-location: false
+  global-config:
+      refresh: false
+      sql-session-factory: com.xxx.SqlSessionFactory
+  globalConfiguration:
+        # id生成策略 0 自增 1 用户输入
+      idType: 0
+          # 数据库类型
+      dbType: mysql
+          # 字段是否为下划线格式
+      dbColumnUnderline: false
+
     #        RabbitMq 配置
     rabbitmq:
       host: ${server.host}

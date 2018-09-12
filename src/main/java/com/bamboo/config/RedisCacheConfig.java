@@ -1,4 +1,4 @@
-package com.bamboo.grow.config;
+package com.bamboo.config;
 
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -15,7 +15,6 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
- * @author litao
  * @create 2018-07-03 上午11:23
  **/
 @Configuration

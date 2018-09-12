@@ -1,4 +1,4 @@
-package com.bamboo.grow.practice;
+package com.bamboo.practice;
 
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;

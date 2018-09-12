@@ -1,4 +1,4 @@
-package com.bamboo.grow.practice;
+package com.bamboo.practice;
 
 import cn.jiguang.common.ClientConfig;
 import cn.jiguang.common.resp.APIConnectionException;

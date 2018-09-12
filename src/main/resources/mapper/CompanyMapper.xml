@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.bamboo.grow.mapper.CompanyMapper">
-  <resultMap id="BaseResultMap" type="com.bamboo.grow.model.Company">
+<mapper namespace="com.bamboo.mapper.CompanyMapper">
+  <resultMap id="BaseResultMap" type="com.bamboo.model.Company">
     <id column="company_id" jdbcType="VARCHAR" property="companyId" />
     <result column="company_name" jdbcType="VARCHAR" property="companyName" />
     <result column="company_address" jdbcType="VARCHAR" property="companyAddress" />
@@ -18,7 +18,7 @@
     <result column="area" jdbcType="VARCHAR" property="area" />
     <result column="create_time" jdbcType="VARCHAR" property="createTime" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.bamboo.grow.model.Company">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.bamboo.model.Company">
     <result column="business_introduction" jdbcType="LONGVARCHAR" property="businessIntroduction" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -87,7 +87,7 @@
   <sql id="Blob_Column_List">
     business_introduction
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.bamboo.grow.model.CompanyExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.bamboo.model.CompanyExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -104,7 +104,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.bamboo.grow.model.CompanyExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.bamboo.model.CompanyExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -131,13 +131,13 @@
     delete from company
     where company_id = #{companyId,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.bamboo.grow.model.CompanyExample">
+  <delete id="deleteByExample" parameterType="com.bamboo.model.CompanyExample">
     delete from company
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.bamboo.grow.model.Company">
+  <insert id="insert" parameterType="com.bamboo.model.Company">
     insert into company (company_id, company_name, company_address, 
       company_cover, landline, company_url, 
       company_scale, type, industry, 
@@ -151,7 +151,7 @@
       #{operationTime,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}, 
       #{businessIntroduction,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.bamboo.grow.model.Company">
+  <insert id="insertSelective" parameterType="com.bamboo.model.Company">
     insert into company
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="companyId != null">
@@ -254,7 +254,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.bamboo.grow.model.CompanyExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.bamboo.model.CompanyExample" resultType="java.lang.Long">
     select count(*) from company
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -359,7 +359,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.bamboo.grow.model.Company">
+  <update id="updateByPrimaryKeySelective" parameterType="com.bamboo.model.Company">
     update company
     <set>
       <if test="companyName != null">
@@ -410,7 +410,7 @@
     </set>
     where company_id = #{companyId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.bamboo.grow.model.Company">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.bamboo.model.Company">
     update company
     set company_name = #{companyName,jdbcType=VARCHAR},
       company_address = #{companyAddress,jdbcType=VARCHAR},
@@ -429,7 +429,7 @@
       business_introduction = #{businessIntroduction,jdbcType=LONGVARCHAR}
     where company_id = #{companyId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.bamboo.grow.model.Company">
+  <update id="updateByPrimaryKey" parameterType="com.bamboo.model.Company">
     update company
     set company_name = #{companyName,jdbcType=VARCHAR},
       company_address = #{companyAddress,jdbcType=VARCHAR},

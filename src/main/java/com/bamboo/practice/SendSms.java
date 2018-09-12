@@ -1,6 +1,6 @@
-package com.bamboo.grow.practice;
+package com.bamboo.practice;
 
-import com.bamboo.grow.utils.HttpSender;
+import com.bamboo.utils.HttpSender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

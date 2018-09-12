@@ -1,8 +1,10 @@
-package com.bamboo.grow.mapper;
+package com.bamboo.mapper;
 
-import com.bamboo.grow.model.Company;
-import com.bamboo.grow.model.CompanyExample;
+import com.bamboo.model.Company;
+import com.bamboo.model.CompanyExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface CompanyMapper {

@@ -1,7 +1,10 @@
-package com.bamboo.grow.practice;
-import com.bamboo.grow.config.RabbitConfig;
+package com.bamboo.practice;
+import com.bamboo.config.RabbitConfig;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class RabbitMq {
     @Autowired
     private AmqpTemplate amqpTemplate;

@@ -1,4 +1,4 @@
-package com.bamboo.grow.model;
+package com.bamboo.model;
 
 import java.util.ArrayList;
 import java.util.List;

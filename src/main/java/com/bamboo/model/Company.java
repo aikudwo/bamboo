@@ -1,4 +1,4 @@
-package com.bamboo.grow.model;
+package com.bamboo.model;
 
 public class Company {
     private String companyId;

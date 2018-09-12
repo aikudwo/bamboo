@@ -1,4 +1,4 @@
-package com.bamboo.grow.utils;
+package com.bamboo.utils;
 
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.GetMethod;

@@ -156,8 +156,8 @@
 		<!--mybatis plus 插件-->
 		<dependency>
 			<groupId>com.baomidou</groupId>
-			<artifactId>mybatisplus-spring-boot-starter</artifactId>
-			<version>1.0.1</version>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>3.0.1</version>
 		</dependency>
 
 		<dependency>

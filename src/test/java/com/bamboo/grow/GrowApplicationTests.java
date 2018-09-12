@@ -1,7 +1,5 @@
 package com.bamboo.grow;
 
-import com.bamboo.Controller.ExceptionController;
-import com.bamboo.model.Person;
 import com.bamboo.practice.RabbitMq;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.FileReader;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -22,24 +19,12 @@ import java.util.stream.DoubleStream;
 public class GrowApplicationTests {
 
     @Autowired
-    ExceptionController exceptionController;
-    @Autowired
     private AmqpTemplate amqpTemplate;
     @Autowired
     private RabbitMq sendMq;
 
     @Test
     public void contextLoads() {
-    }
-
-    @Test
-    public void ExceptionTest() {
-        try {
-            exceptionController.ExceptionTest();
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
     }
 
     @Test
@@ -254,7 +239,7 @@ public class GrowApplicationTests {
 
     @Test
     public void fileRead() {
-
+        
     }
 
 }

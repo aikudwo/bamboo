@@ -5,9 +5,10 @@ import com.bamboo.model.CompanyExample;
 
 import java.util.List;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 
-public interface CompanyMapper {
+public interface CompanyMapper extends BaseMapper<Company> {
     long countByExample(CompanyExample example);
 
     int deleteByExample(CompanyExample example);

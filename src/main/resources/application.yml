@@ -13,17 +13,35 @@ spring:
       url: jdbc:mysql://${server.host}:3306/company?useUnicode=true&characterEncoding=utf8&useSSL=false
       username: dev_data
       password: 6b4BnnmiczHEBZGs
-      type: com.zaxxer.hikari.HikariDataSource
-      hikari:
-        minimum-idle: 5
-        maximum-pool-size: 15
-        auto-commit: true
-        idle-timeout: 30000
-        pool-name: DatebookHikariCP
-        max-lifetime: 1800000
-        connection-timeout: 30000
-        connection-test-query: SELECT 1
 
+
+#      type: com.zaxxer.hikari.HikariDataSource
+#      hikari:
+#        minimum-idle: 5
+#        maximum-pool-size: 15
+#        auto-commit: true
+#        idle-timeout: 30000
+#        pool-name: DatebookHikariCP
+#        max-lifetime: 1800000
+#        connection-timeout: 30000
+#        connection-test-query: SELECT 1
+#      mybatis-plus:
+#  # 数据源名称
+#  #  datasource: datasource
+#  # mapper配置路径
+#  #  mapperLocations: classpath:/mapper/*.xml
+#  # mybatis配置路径
+#        configLocation:
+#  # entity的包
+#        typeAliasesPackage: com.bamboo.model
+#  # 全局配置
+#        globalConfiguration:
+#    # id生成策略 0 自增 1 用户输入
+#          idType: 0
+#    # 数据库类型
+#          dbType: mysql
+#    # 字段是否为下划线格式
+#          dbColumnUnderline: false
     #        RabbitMq 配置
     rabbitmq:
       host: ${server.host}

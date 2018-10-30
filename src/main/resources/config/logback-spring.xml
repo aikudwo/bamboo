@@ -40,11 +40,11 @@
     </appender>
 
     <!--根logger-->
-    <!--<root level="warn">
+    <root level="warn">
         <appender-ref ref="console"/>
         <appender-ref ref="file"/>
         <appender-ref ref="error"/>
-    </root>-->
+    </root>
 
     <!--项目内根logger-->
     <logger name="cn.ibona.companyservice" level="${level}" additivity="false">

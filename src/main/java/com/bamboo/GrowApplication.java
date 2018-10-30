@@ -11,7 +11,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableEurekaClient
 @EnableFeignClients
 @EnableCaching
-@MapperScan("com.bamboo.mapper")
+//@MapperScan("com.bamboo.mapper")
 public class GrowApplication {
 
 	public static void main(String[] args) {

@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AspectController {
     @MyLog
-    @RequestMapping("/")
-    public Object AspectTest(){
+    @RequestMapping("/aaaa")
+    public String AspectTest(){
         int i = 0 ;
         int j = 0;
         int c = i/j;
         System.out.println("开始执行AspectTest:"+System.currentTimeMillis());
-        return "666";
+        return "66666666";
     }
 }

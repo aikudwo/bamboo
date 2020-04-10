@@ -31,14 +31,15 @@ public class LogAspectMyLog {
      * @param joinPoint
      */
     @Around("cut()")
-    public void advice(ProceedingJoinPoint joinPoint){
+    public Object advice(ProceedingJoinPoint joinPoint){
         System.out.println("环绕通知之开始");
         try {
-            joinPoint.proceed();
+           return joinPoint.proceed();
         } catch (Throwable e) {
+            System.out.println();
             e.printStackTrace();
+            return "菜鸡：又出bug";
         }
-        System.out.println("环绕通知之结束");
     }
 
     /**
@@ -46,13 +47,13 @@ public class LogAspectMyLog {
      * 还可以指定一个throwing的返回值形参名,可以通过该形参名
      * @param returnVal
      */
-   @AfterReturning(pointcut = "cut()",returning = "returnVal")
+   /*@AfterReturning(pointcut = "cut()",returning = "returnVal")
     public void afterReturen(Object returnVal){
        System.out.println("AOP AfterReturning Advice:" + returnVal);
-   }
+   }*/
 
-   @AfterThrowing(pointcut = "cut()",throwing = "error")
+  /* @AfterThrowing(pointcut = "cut()",throwing = "error")
     public void throwPoint(JoinPoint joinPoint,Throwable error){
        System.out.println("只有出现错误才会打印哦" + error);
-   }
+   }*/
 }

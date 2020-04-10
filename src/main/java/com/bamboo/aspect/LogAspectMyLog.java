@@ -1,4 +1,4 @@
-package com.bamboo.practice;
+package com.bamboo.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;

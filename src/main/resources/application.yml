@@ -1,6 +1,6 @@
 server:
-    host: 120.79.138.224  #开发环境
-    port: 9963
+    host: 127.0.0.1  #开发环境
+    port: 9999
 spring:
     application:
         name: grow

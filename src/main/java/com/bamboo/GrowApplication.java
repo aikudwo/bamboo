@@ -12,7 +12,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableCaching
 //@MapperScan("com.bamboo.mapper")
 public class GrowApplication {
-
+	//？？？？？？
 	public static void main(String[] args) {
 		SpringApplication.run(GrowApplication.class, args);
 

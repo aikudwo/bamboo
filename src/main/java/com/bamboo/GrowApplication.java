@@ -13,7 +13,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableCaching
 //@MapperScan("com.bamboo.mapper")
 public class GrowApplication {
-
+	//新電腦啓動不了這個項目啊
 	public static void main(String[] args) {
 		SpringApplication.run(GrowApplication.class, args);
 	}
